@@ -46,22 +46,31 @@ We take a fourth path. If the package offers an extension point — a plugin, a 
 
 <table>
 <tr>
-<td width="50%" valign="top">
+<td width="33%" valign="top">
 
 ### 🗂️ [`spatie-medialibrary-uuid-path-generator`](https://github.com/weldist/spatie-medialibrary-uuid-path-generator)
 
-[![Packagist](https://img.shields.io/badge/composer-weldist%2Fspatie--medialibrary--uuid--path--generator-F28D1A?style=flat-square&logo=packagist&logoColor=white)](https://packagist.org/packages/weldist/spatie-medialibrary-uuid-path-generator)
+[![Packagist](https://img.shields.io/badge/composer-F28D1A?style=flat-square&logo=packagist&logoColor=white)](https://packagist.org/packages/weldist/spatie-medialibrary-uuid-path-generator)
 
 Replaces `spatie/laravel-medialibrary`'s flat ID-based file layout with a UUID-based `PathGenerator` that shards media into a four-level tree, plus a cascading `FileRemover`, two-way `--dry-run` migration commands, and `media:prune-uuid-paths` to reclaim orphaned directories that `media-library:clean` misses.
 
 </td>
-<td width="50%" valign="top">
+<td width="33%" valign="top">
 
 ### 🖼️ [`spatie-medialibrary-webp-downloader`](https://github.com/weldist/spatie-medialibrary-webp-downloader)
 
-[![Packagist](https://img.shields.io/badge/composer-weldist%2Fspatie--medialibrary--webp--downloader-F28D1A?style=flat-square&logo=packagist&logoColor=white)](https://packagist.org/packages/weldist/spatie-medialibrary-webp-downloader)
+[![Packagist](https://img.shields.io/badge/composer-F28D1A?style=flat-square&logo=packagist&logoColor=white)](https://packagist.org/packages/weldist/spatie-medialibrary-webp-downloader)
 
 An inline, idempotent conversion layer for `spatie/laravel-medialibrary` that turns URL-downloaded images into WebP **before they're written to disk** — no extra queue job, no double storage — plus a restartable artisan command to backfill already-stored media on the queue.
+
+</td>
+<td width="33%" valign="top">
+
+### 💓 [`laravel-pulse-md5-patch`](https://github.com/weldist/laravel-pulse-md5-patch)
+
+[![Packagist](https://img.shields.io/badge/composer-F28D1A?style=flat-square&logo=packagist&logoColor=white)](https://packagist.org/packages/weldist/laravel-pulse-md5-patch)
+
+Makes `laravel/pulse` work on MySQL servers without the `MD5()` function (MySQL 9.6+, managed offerings where the Legacy Hashing component can't be installed) by swapping Pulse's generated `key_hash` column for a plain `char(32)` and computing the hash in PHP instead of the database.
 
 </td>
 </tr>
