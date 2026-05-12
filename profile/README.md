@@ -52,20 +52,16 @@ We take a fourth path. If the package offers an extension point — a plugin, a 
 
 [![Packagist](https://img.shields.io/badge/composer-weldist%2Fspatie--medialibrary--uuid--path--generator-F28D1A?style=flat-square&logo=packagist&logoColor=white)](https://packagist.org/packages/weldist/spatie-medialibrary-uuid-path-generator)
 
-**Problem.** `spatie/laravel-medialibrary` stores media in flat directories named after sequential IDs — slow at scale, easily enumerable, leaves orphan parents on delete that `media-library:clean` can't reach.
-
-**Solution.** A UUID-based `PathGenerator` that shards media into a four-level tree, a cascading `FileRemover`, two-way `--dry-run` migration commands, and `media:prune-uuid-paths` to reclaim what `media-library:clean` misses.
+Replaces `spatie/laravel-medialibrary`'s flat ID-based file layout with a UUID-based `PathGenerator` that shards media into a four-level tree, plus a cascading `FileRemover`, two-way `--dry-run` migration commands, and `media:prune-uuid-paths` to reclaim orphaned directories that `media-library:clean` misses.
 
 </td>
 <td width="50%" valign="top">
 
 ### 🖼️ [`spatie-medialibrary-webp-downloader`](https://github.com/weldist/spatie-medialibrary-webp-downloader)
 
-[![Status](https://img.shields.io/badge/status-coming%20soon-94a3b8?style=flat-square)](https://github.com/weldist/spatie-medialibrary-webp-downloader)
+[![Packagist](https://img.shields.io/badge/composer-weldist%2Fspatie--medialibrary--webp--downloader-F28D1A?style=flat-square&logo=packagist&logoColor=white)](https://packagist.org/packages/weldist/spatie-medialibrary-webp-downloader)
 
-**Problem.** Adding media from a URL — OAuth avatars, external API images — stores whatever format the source serves. Optimization becomes a separate later step with an extra queue job, double storage until the original is deleted, and a worker.
-
-**Solution.** An inline, idempotent conversion layer that turns URL-downloaded images into WebP **before they're written to disk** — no queue, no double storage — plus a restartable backfill command for already-stored media.
+An inline, idempotent conversion layer for `spatie/laravel-medialibrary` that turns URL-downloaded images into WebP **before they're written to disk** — no extra queue job, no double storage — plus a restartable artisan command to backfill already-stored media on the queue.
 
 </td>
 </tr>
