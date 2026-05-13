@@ -1,8 +1,6 @@
 <div align="center">
 
-<img src="https://github.com/weldist.png" width="180" alt="weld.ist" />
-
-# weld.ist
+<img src="https://raw.githubusercontent.com/weldist/.github/master/assets/weld_ist-logo.svg" width="360" alt="weld.ist" />
 
 **We weld the missing pieces onto big open source packages.**
 Small, focused, reversible — packages that bolt onto what you already use.
